@@ -1,17 +1,17 @@
 <template>
-  <div class="button"> {{ title }} </div>
+  <div class='button'> {{ title }} </div>
 </template>
 
-<script lang="ts">
+<script lang='ts'>
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component({
   props: {
-    title: String
-  }
+    title: String,
+  },
 })
 export default class DefaultButton extends Vue {
-  
+
 }
 
 </script>

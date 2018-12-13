@@ -1,29 +1,29 @@
 <template>
 <nav>
-  <div class="navigation-wrapper">
-    <div class="logo-wrapper">
-      <img class="navigation-logo" alt="Vue logo" src="../assets/logo.png">
+  <div class='navigation-wrapper'>
+    <div class='logo-wrapper'>
+      <img class='navigation-logo' alt='Vue logo' src='../assets/logo.png'>
       <h2>Risa - IT</h2>
     </div>
-    <div class="navigation-link-bar">
+    <div class='navigation-link-bar'>
       <RouteItem
-        v-for="route in routes"
-        :route="route.route"
-        :name="route.name"
+        v-for='route in routes'
+        :route='route.route'
+        :name='route.name'
       />
     </div>
   </div>
 </nav>
 </template>
 
-<script lang="ts">
+<script lang='ts'>
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import RouteItem from '@/components/RouteItem.vue';
 
 @Component({
   components: {
-    RouteItem
-  }
+    RouteItem,
+  },
 })
 export default class MainMenu extends Vue {
   routes = [
@@ -37,7 +37,7 @@ export default class MainMenu extends Vue {
     },
     {
       route: '/about',
-      name: 'About'      
+      name: 'About'
     }
   ]
 }
@@ -53,7 +53,7 @@ h2  {
 
 nav {
   padding: 4px 0;
-  background-color: rgba(0, 0, 28, 0.6);
+  background-color: rgba(40, 49, 78, 0.8);
   position: fixed;
   top: 0;
   width: 100%;
@@ -65,7 +65,7 @@ nav {
   width: 100%;
   display: flex;
   margin: 0 auto;
-  max-width: 500px;
+  max-width: 800px;
   justify-content: center;
   align-items: center;
 }

@@ -5,5 +5,5 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-export default class Team extends Vue {}  
+export default class Team extends Vue {}
 </script>
