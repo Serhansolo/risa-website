@@ -1,11 +1,11 @@
 <template>
-  <div class='home-header'>
-    <div class='overlay'>
-      <div class='text-wrapper'>
-        <h1>The Solution to</h1>
+  <div :class='$style.home_header'>
+    <div :class='$style.overlay'>
+      <div :class='$style.text_wrapper'>
+        <h1>The Solutions to</h1>
         <h1>Grow your Business</h1>
         <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
-        <div class='button-wrapper'>
+        <div :class='$style.button_wrapper'>
           <DefaultButton
             title='Button dit?'
           />
@@ -31,13 +31,16 @@ export default class HomeHeader extends Vue {}
 
 </script>
 
-<style scoped>
-.home-header {
+<style module>
+.home_header {
   width: 100%;
-  height: 400px;
-  background-image: url('../assets/stock-picture.jpg');
+  height: 720px;
+  /* background-image: url('../assets/stock-picture.jpg'); */
+  color: rgb(51, 75, 144);
   background-size: cover;
   overflow: hidden;
+  color: white;
+
 }
 
 .overlay {
@@ -57,24 +60,32 @@ export default class HomeHeader extends Vue {}
   align-items: center;
 }
 
-.text-wrapper {
+.text_wrapper {
   max-width: 500px;
 }
 
-.text-wrapper h1:nth-of-type(1) {
-  font-weight: 200;
+.text_wrapper h1:nth-of-type(1) {
+  font-weight: 400;
+  font-size: 48px;
+  color: white;
+
 }
 
-.text-wrapper h1:nth-of-type(2) {
+.text_wrapper h1:nth-of-type(2) {
   font-weight: bold;
+  font-size: 48px;
+  margin-bottom: 20px;
 }
 
-.text-wrapper h2 {
+.text_wrapper h2 {
   font-size: 14px;
   font-weight: 200;
+  margin-bottom: 40px;
+  line-height: 20px;
+  font-family: 'Muli';
 }
 
-.button-wrapper {
+.button_wrapper {
   display: flex;
   justify-content: center;
 }

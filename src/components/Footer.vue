@@ -1,28 +1,30 @@
 <template>
-  <div class='footer'>
-    <div class='footer_content'>
-      <div class='contact col'>
-        <h2>RISA - IT</h2>
+  <div :class='$style.footer'>
+    <div :class='$style.footer_content'>
+      <div :class='[$style.contact, $style.col]'>
+        <div :class='$style.logo_wrapper'>
+          <img alt='Vue logo' src='../assets/logo.png'><h2>Rounding</h2>
+        </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
         <p>info@risa-it.nl</p>
         <p>088 - 070 08 10</p>
       </div>
-      <div class='important_links col'>
+      <div :class='[$style.important_links, $style.col]'>
         <h2>Important Links</h2>
         <li v-for='route in routes'>
           <router-link :to='route.route' tag='a'>{{ route.name }}</router-link>
         </li>
       </div>
-      <div class='latest_news, col'>
+      <div :class='[$style.latest_news, $style.col]'>
         <h2>Latest News</h2>
       </div>
-      <div class='subscribe, col'>
+      <div :class='[$style.subscribe, $style.col]'>
         <h2>Subscribe Us</h2>
       </div>
     </div>
 
-    <div class="copywrite_block">
-      <p> &copy; 2018 <router-link to='/home' tag='a'>RISA-IT</router-link>. All right reserved</p>
+    <div :class='$style.copywrite_block'>
+      <p> &copy; 2018 <router-link to='/home' tag='a'>Rounding</router-link>. All right reserved</p>
     </div>
   </div>
 </template>
@@ -46,22 +48,37 @@ routes = [
     name: 'About'
   }
 ]
-
-
 }
 
 </script>
 
-<style scoped>
+<style module>
 
-.footer h2 {
-  font-size: 16px;
-  font-weight: bold;
-
+.logo_wrapper {
+  display: flex;
 }
+
+.logo_wrapper img {
+  width: 20px;
+  height: 20px;
+}
+
 
 .footer li {
   list-style: none;
+}
+
+.footer h2 {
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.logo_wrapper h2 {
+  margin-left: 10px;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .footer a {
@@ -77,7 +94,7 @@ routes = [
 .footer {
   width: 100%;
   height: 385px;
-  background-color: rgb(16, 31, 34);
+  background-image: url('../assets/footer_bg.png');
   display: flex;
   justify-content: center;
   flex-direction: column;

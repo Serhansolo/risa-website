@@ -6,11 +6,9 @@
       <h2 :class='$style.navigation_title'>Rounding</h2>
     </div>
     <div :class='$style.navigation_link_bar'>
-      <RouteItem
-        v-for='route in routes'
-        :route='route.route'
-        :name='route.name'
-      />
+      <li v-for='route in routes'>
+        <router-link :to='route.route' tag='a'>{{ route.name }}</router-link>
+      </li>
     </div>
   </div>
 </nav>
@@ -18,13 +16,8 @@
 
 <script lang='ts'>
 import { Component, Vue } from 'vue-property-decorator';
-import RouteItem from '@/components/RouteItem.vue';
 
-@Component({
-  components: {
-    RouteItem,
-  },
-})
+@Component
 export default class MainMenu extends Vue {
   routes = [
     {
@@ -44,7 +37,28 @@ export default class MainMenu extends Vue {
 
 </script>
 
+<style>
+.router-link-exact-active {
+  color: rgb(85, 128, 255) !important;
+}
+
+</style>
+
 <style module>
+
+.navigation_link_bar li {
+  list-style: none;
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 30px;
+  font-size: 12px;
+}
+
+.navigation_link_bar a {
+  text-decoration: none;
+  color: white;
+}
+
 .navigation_title  {
   margin-left: 10px;
   font-size: 18px;
