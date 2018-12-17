@@ -37,6 +37,7 @@ export default class HomeHeader extends Vue {}
   height: 400px;
   background-image: url('../assets/stock-picture.jpg');
   background-size: cover;
+  overflow: hidden;
 }
 
 .overlay {

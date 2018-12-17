@@ -1,9 +1,9 @@
 <template>
-  <div class='button'> {{ title }} </div>
+  <div :class='$style.button'>{{ title }}</div>
 </template>
 
 <script lang='ts'>
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component,  Vue } from 'vue-property-decorator';
 
 @Component({
   props: {
@@ -16,7 +16,7 @@ export default class DefaultButton extends Vue {
 
 </script>
 
-<style scoped>
+<style module>
   .button {
     min-width: 125px;
     border-radius: 30px;

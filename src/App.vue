@@ -1,15 +1,38 @@
 <template>
-  <div id="app">
+  <div id='app'>
     <MainMenu/>
     <router-view/>
-    <!-- <div class="filling">
+    <div class="filling">
+      <!-- <div class="service-card">
 
-    </div> -->
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 463 463" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 463 463">
+            <g>
+              <path d="m367.5,32h-57.734c-3.138-9.29-11.93-16-22.266-16h-24.416c-7.41-9.965-19.149-16-31.584-16s-24.174,6.035-31.584,16h-24.416c-10.336,0-19.128,6.71-22.266,16h-57.734c-17.369,0-31.5,14.131-31.5,31.5v368c0,17.369 14.131,31.5 31.5,31.5h272c17.369,0 31.5-14.131 31.5-31.5v-368c0-17.369-14.131-31.5-31.5-31.5zm-214.266,47c3.138,9.29 11.93,16 22.266,16h112c10.336,0 19.128-6.71 22.266-16h42.234v337h-241v-337h42.234zm22.266-48h28.438c2.67,0 5.139-1.42 6.482-3.728 4.473-7.684 12.353-12.272 21.08-12.272s16.607,4.588 21.079,12.272c1.344,2.308 3.813,3.728 6.482,3.728h28.439c4.687,0 8.5,3.813 8.5,8.5v31.981c0,0.007-0.001,0.013-0.001,0.019 0,0.003 0,0.006 0,0.01-0.005,4.682-3.816,8.49-8.5,8.49h-112c-4.68,0-8.488-3.803-8.499-8.481 0-0.007 0.001-0.013 0.001-0.019 0-0.013-0.002-0.026-0.002-0.039v-31.961c0.001-4.687 3.814-8.5 8.501-8.5zm208.5,400.5c0,9.098-7.402,16.5-16.5,16.5h-272c-9.098,0-16.5-7.402-16.5-16.5v-368c0-9.098 7.402-16.5 16.5-16.5h56.5v17h-48.5c-4.143,0-7.5,3.357-7.5,7.5v352c0,4.143 3.357,7.5 7.5,7.5h256c4.143,0 7.5-3.357 7.5-7.5v-352c0-4.143-3.357-7.5-7.5-7.5h-48.5v-17h56.5c9.098,0 16.5,7.402 16.5,16.5v368z"/>
+              <path d="m231.5,63c4.143,0 7.5-3.357 7.5-7.5v-16c0-4.143-3.357-7.5-7.5-7.5s-7.5,3.357-7.5,7.5v16c0,4.143 3.357,7.5 7.5,7.5z"/>
+              <path d="m239.5,167h48c4.143,0 7.5-3.357 7.5-7.5s-3.357-7.5-7.5-7.5h-48c-4.143,0-7.5,3.357-7.5,7.5s3.357,7.5 7.5,7.5z"/>
+              <path d="m239.5,199h80c4.143,0 7.5-3.357 7.5-7.5s-3.357-7.5-7.5-7.5h-80c-4.143,0-7.5,3.357-7.5,7.5s3.357,7.5 7.5,7.5z"/>
+              <path d="m162.196,196.804c1.465,1.464 3.385,2.196 5.304,2.196s3.839-0.732 5.304-2.196l40-40c2.929-2.93 2.929-7.678 0-10.607-2.93-2.928-7.678-2.928-10.607,0l-34.697,34.697-18.696-18.697c-2.93-2.928-7.678-2.928-10.607,0-2.929,2.93-2.929,7.678 0,10.607l23.999,24z"/>
+              <path d="m239.5,247h48c4.143,0 7.5-3.357 7.5-7.5s-3.357-7.5-7.5-7.5h-48c-4.143,0-7.5,3.357-7.5,7.5s3.357,7.5 7.5,7.5z"/>
+              <path d="m239.5,279h80c4.143,0 7.5-3.357 7.5-7.5s-3.357-7.5-7.5-7.5h-80c-4.143,0-7.5,3.357-7.5,7.5s3.357,7.5 7.5,7.5z"/>
+              <path d="m162.196,276.804c1.465,1.464 3.385,2.196 5.304,2.196s3.839-0.732 5.304-2.196l40-40c2.929-2.93 2.929-7.678 0-10.607-2.93-2.928-7.678-2.928-10.607,0l-34.697,34.697-18.696-18.697c-2.93-2.928-7.678-2.928-10.607,0-2.929,2.93-2.929,7.678 0,10.607l23.999,24z"/>
+              <path d="m239.5,327h48c4.143,0 7.5-3.357 7.5-7.5s-3.357-7.5-7.5-7.5h-48c-4.143,0-7.5,3.357-7.5,7.5s3.357,7.5 7.5,7.5z"/>
+              <path d="m239.5,359h80c4.143,0 7.5-3.357 7.5-7.5s-3.357-7.5-7.5-7.5h-80c-4.143,0-7.5,3.357-7.5,7.5s3.357,7.5 7.5,7.5z"/>
+              <path d="m162.196,356.804c1.465,1.464 3.385,2.196 5.304,2.196s3.839-0.732 5.304-2.196l40-40c2.929-2.93 2.929-7.678 0-10.607-2.93-2.928-7.678-2.928-10.607,0l-34.697,34.697-18.696-18.697c-2.93-2.928-7.678-2.928-10.607,0-2.929,2.93-2.929,7.678 0,10.607l23.999,24z"/>
+            </g>
+          </svg>
+
+        <h2> App development</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
+        <div class="service-cta">
+          Details
+        </div>
+      </div> -->
+    </div>
     <Footer/>
   </div>
 </template>
 
-<script lang="ts">
+<script lang='ts'>
 import { Component, Vue } from 'vue-property-decorator';
 import MainMenu from '@/components/MainMenu.vue';
 import Footer from '@/components/Footer.vue';
@@ -24,18 +47,81 @@ export default class App extends Vue {}
 </script>
 
 <style>
+  @font-face {
+    font-family: 'Muli';
+    src: url('/assets/fonts/Multi-Regular.ttf').format('truetype'),
+         url('/assets/typo/Multi-Regular.ttf').format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+      src:  url('/assets/fonts/Poppins-Regular.ttf').format('truetype'),
+            url('/assets/typo/Poppins-Regular.ttf').format('truetype');
+  }
+
+
+  svg {
+    margin: 20px auto 10px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .service-card {
+    width: 250px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card:hover {
+    border: 0.1px solid rgb(85, 128, 255);
+  }
+
+  .service-card:hover svg {
+
+  }
+
+  .service-card:hover .service-cta {
+    border: 0.1px solid rgb(225, 225, 255, .0)
+  }
+
+  .service-cta {
+    width: 100%;
+    padding: 15px 0;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, .2);
+  }
+
+  .service-card h2 {
+    color: black;
+    max-width: 180px;
+  }
+
+  .service-card p {
+    color: black;
+    max-width: 220px;
+    min-height: 100px;
+  }
+
   body, html {
     margin: 0;
     color: rgb(254, 254, 254);
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-family: 'Poppins';
   }
 
-  h1 {
-    margin: 0
+  h1, h2 {
+    margin: 0;
   }
 
   .filling {
     width: 100%;
     Height : 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>

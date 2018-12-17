@@ -3,7 +3,7 @@
 </template>
 
 <script lang='ts'>
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Vue } from 'vue-property-decorator';
 
 @Component({
   props: {
@@ -15,7 +15,7 @@ export default class RouteItem extends Vue {}
 
 </script>
 
-<style scoped>
+<style>
   .router-link-exact-active {
     color: rgb(85, 128, 255);
   }
@@ -25,6 +25,7 @@ export default class RouteItem extends Vue {}
     display: inline-block;
     cursor: pointer;
     margin-left: 30px;
+    font-size: 12px;
   }
 
 </style>
