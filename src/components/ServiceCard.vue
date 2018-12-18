@@ -1,79 +1,108 @@
 <template>
-  <div class="service-card">
-    <svg>
-      <g>
-        <path d="m367.5,32h-57.734c-3.138-9.29-11.93-16-22.266-16h-24.416c-7.41-9.965-19.149-16-31.584-16s-24.174,6.035-31.584,16h-24.416c-10.336,0-19.128,6.71-22.266,16h-57.734c-17.369,0-31.5,14.131-31.5,31.5v368c0,17.369 14.131,31.5 31.5,31.5h272c17.369,0 31.5-14.131 31.5-31.5v-368c0-17.369-14.131-31.5-31.5-31.5zm-214.266,47c3.138,9.29 11.93,16 22.266,16h112c10.336,0 19.128-6.71 22.266-16h42.234v337h-241v-337h42.234zm22.266-48h28.438c2.67,0 5.139-1.42 6.482-3.728 4.473-7.684 12.353-12.272 21.08-12.272s16.607,4.588 21.079,12.272c1.344,2.308 3.813,3.728 6.482,3.728h28.439c4.687,0 8.5,3.813 8.5,8.5v31.981c0,0.007-0.001,0.013-0.001,0.019 0,0.003 0,0.006 0,0.01-0.005,4.682-3.816,8.49-8.5,8.49h-112c-4.68,0-8.488-3.803-8.499-8.481 0-0.007 0.001-0.013 0.001-0.019 0-0.013-0.002-0.026-0.002-0.039v-31.961c0.001-4.687 3.814-8.5 8.501-8.5zm208.5,400.5c0,9.098-7.402,16.5-16.5,16.5h-272c-9.098,0-16.5-7.402-16.5-16.5v-368c0-9.098 7.402-16.5 16.5-16.5h56.5v17h-48.5c-4.143,0-7.5,3.357-7.5,7.5v352c0,4.143 3.357,7.5 7.5,7.5h256c4.143,0 7.5-3.357 7.5-7.5v-352c0-4.143-3.357-7.5-7.5-7.5h-48.5v-17h56.5c9.098,0 16.5,7.402 16.5,16.5v368z"/>
-        <path d="m231.5,63c4.143,0 7.5-3.357 7.5-7.5v-16c0-4.143-3.357-7.5-7.5-7.5s-7.5,3.357-7.5,7.5v16c0,4.143 3.357,7.5 7.5,7.5z"/>
-        <path d="m239.5,167h48c4.143,0 7.5-3.357 7.5-7.5s-3.357-7.5-7.5-7.5h-48c-4.143,0-7.5,3.357-7.5,7.5s3.357,7.5 7.5,7.5z"/>
-        <path d="m239.5,199h80c4.143,0 7.5-3.357 7.5-7.5s-3.357-7.5-7.5-7.5h-80c-4.143,0-7.5,3.357-7.5,7.5s3.357,7.5 7.5,7.5z"/>
-        <path d="m162.196,196.804c1.465,1.464 3.385,2.196 5.304,2.196s3.839-0.732 5.304-2.196l40-40c2.929-2.93 2.929-7.678 0-10.607-2.93-2.928-7.678-2.928-10.607,0l-34.697,34.697-18.696-18.697c-2.93-2.928-7.678-2.928-10.607,0-2.929,2.93-2.929,7.678 0,10.607l23.999,24z"/>
-        <path d="m239.5,247h48c4.143,0 7.5-3.357 7.5-7.5s-3.357-7.5-7.5-7.5h-48c-4.143,0-7.5,3.357-7.5,7.5s3.357,7.5 7.5,7.5z"/>
-        <path d="m239.5,279h80c4.143,0 7.5-3.357 7.5-7.5s-3.357-7.5-7.5-7.5h-80c-4.143,0-7.5,3.357-7.5,7.5s3.357,7.5 7.5,7.5z"/>
-        <path d="m162.196,276.804c1.465,1.464 3.385,2.196 5.304,2.196s3.839-0.732 5.304-2.196l40-40c2.929-2.93 2.929-7.678 0-10.607-2.93-2.928-7.678-2.928-10.607,0l-34.697,34.697-18.696-18.697c-2.93-2.928-7.678-2.928-10.607,0-2.929,2.93-2.929,7.678 0,10.607l23.999,24z"/>
-        <path d="m239.5,327h48c4.143,0 7.5-3.357 7.5-7.5s-3.357-7.5-7.5-7.5h-48c-4.143,0-7.5,3.357-7.5,7.5s3.357,7.5 7.5,7.5z"/>
-        <path d="m239.5,359h80c4.143,0 7.5-3.357 7.5-7.5s-3.357-7.5-7.5-7.5h-80c-4.143,0-7.5,3.357-7.5,7.5s3.357,7.5 7.5,7.5z"/>
-        <path d="m162.196,356.804c1.465,1.464 3.385,2.196 5.304,2.196s3.839-0.732 5.304-2.196l40-40c2.929-2.93 2.929-7.678 0-10.607-2.93-2.928-7.678-2.928-10.607,0l-34.697,34.697-18.696-18.697c-2.93-2.928-7.678-2.928-10.607,0-2.929,2.93-2.929,7.678 0,10.607l23.999,24z"/>
-      </g>
-    </svg>
+  <div :class="$style.service_card"
+    @mouseover="isHovering=true"
+    @mouseout="isHovering=false"
+  >
+    <div :class="$style.svg">
+      <BaseIcon :iconColor="isHovering ? '#5580FF' : '#000000'" width="42" height="43" iconName="test">
+        <component :is="icon"/>
+      </BaseIcon>
+    </div>
 
-    <h2> App development</h2>
+    <h2>Market Research</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
-    <div class="service-cta">Details</div>
+    <div :class="$style.service_cta">Details</div>
   </div>
 </template>
 
-<script lang='ts'>
-import { Vue, Component } from 'vue-property-decorator';
+<script lang="ts">
+import { Vue, Component, Prop } from "vue-property-decorator";
 
-@Component
-export default class ServiceCard extends Vue {}
+import BaseIcon from "@/components/BaseIcon.vue";
+import IconWorker from "@/components/icons/IconWorker.vue";
+import IconPresentation from "@/components/icons/IconPresentation.vue";
+
+@Component({
+  components: {
+    BaseIcon,
+    IconWorker,
+    IconPresentation,
+  },
+})
+export default class ServiceCard extends Vue {
+  @Prop(String) icon!: string
+
+  isHovering = false
+}
+
 </script>
 
-<style scoped>
-  svg {
-    margin: 20px auto 20px;
-    width: 50px;
-    height: 50px;
-  }
+<style module>
 
-  .service-card {
-    width: 250px;
+  .service_card {
+    width: 210px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 0.1px solid transparent;
   }
 
-  .service-card:hover {
+  .service_card:hover {
     border: 0.1px solid rgb(85, 128, 255);
   }
 
-  .service-card:hover svg {
-
+  .service_card:hover .service_cta {
+    border: 1px solid transparent;
+    color: rgb(85, 128, 255);
   }
 
-  .service-card:hover .service-cta {
-    border: 0.1px solid rgb(225, 225, 255, .0)
+  .service_card svg {
+    width: 50px;
+    height: 50px;
   }
 
-  .service-cta {
+  .service_card h2 {
+    font-family: "Poppins";
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .service_card p {
+    font-family: "Muli";
+    font-size: 12px;
+    line-height: 20px;
+    color: black;
+    max-width: 190px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+ .svg {
+    width: 40px;
+    height: 40px;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .service_cta {
     width: 100%;
-    padding: 15px 0;
+    padding: 12px 0;
     color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid rgba(0, 0, 0, .2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    font-family: "Muli";
+    font-size: 12px;
   }
 
-  .service-card h2 {
+  .service_card h2 {
     color: black;
     max-width: 180px;
   }
 
-  .service-card p {
-    color: black;
-    max-width: 220px;
-    min-height: 100px;
-  }
 </style>

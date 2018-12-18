@@ -67,8 +67,6 @@ export default class MainMenu extends Vue {
 .main_menu {
   padding: 22px 0;
   background-color: rgba(20, 30, 58);
-  position: fixed;
-  top: 0;
   width: 100%;
   z-index: 3;
   font-weight: 500;

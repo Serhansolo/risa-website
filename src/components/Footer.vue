@@ -6,8 +6,8 @@
           <img alt='Vue logo' src='../assets/logo.png'><h2>Rounding</h2>
         </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-        <p>info@risa-it.nl</p>
-        <p>088 - 070 08 10</p>
+        <p>Email: <a href="#">info@risa-it.nl</a></p>
+        <p>Call now: <a href="#">(088) - 070 08 10</a></p>
       </div>
       <div :class='[$style.important_links, $style.col]'>
         <h2>Important Links</h2>
@@ -22,9 +22,8 @@
         <h2>Subscribe Us</h2>
       </div>
     </div>
-
     <div :class='$style.copywrite_block'>
-      <p> &copy; 2018 <router-link to='/home' tag='a'>Rounding</router-link>. All right reserved</p>
+      <p> &copy; 2018 <router-link to='/' tag='a'>Rounding</router-link>. All right reserved</p>
     </div>
   </div>
 </template>
@@ -63,9 +62,9 @@ routes = [
   height: 20px;
 }
 
-
 .footer li {
   list-style: none;
+  margin-bottom: 5px;
 }
 
 .footer h2 {
@@ -82,22 +81,43 @@ routes = [
 }
 
 .footer a {
-  color: rgb(85, 128, 255);
+  color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-family: 'Muli';
+  font-size: 12px;
 }
 
 .footer p {
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: 'Muli';
 }
 
 .footer {
   width: 100%;
   height: 385px;
   background-image: url('../assets/footer_bg.png');
+  background-size: contain;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
+}
+
+.contact p:nth-of-type(1) {
+  margin-bottom: 10px;
+}
+
+.contact p:nth-of-type(2),
+.contact p:nth-of-type(3) {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.contact a {
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .copywrite_block {
@@ -110,12 +130,13 @@ routes = [
 
 .copywrite_block p {
   font-size: 12px;
+  font-weight: 400;
 }
 
 .copywrite_block a {
   color: rgb(85, 128, 255);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .footer_content {
