@@ -13,12 +13,12 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import MainMenu from "@/components/MainMenu.vue";
-import Footer from "@/components/Footer.vue";
-import ServiceCard from "@/components/ServiceCard.vue";
-import PartnerBar from "@/components/PartnerBar.vue";
+<script lang='ts'>
+import { Component, Vue } from 'vue-property-decorator';
+import MainMenu from '@/components/MainMenu.vue';
+import Footer from '@/components/Footer.vue';
+import ServiceCard from '@/components/ServiceCard.vue';
+import PartnerBar from '@/components/PartnerBar.vue';
 
 @Component({
   components: {

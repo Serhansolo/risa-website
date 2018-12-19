@@ -11,7 +11,7 @@
       </div>
       <div :class="[$style.important_links, $style.col]">
         <h2>Important Links</h2>
-        <li v-for="route in routes">
+        <li v-for="route in routes" :key="route.name">
           <router-link :to="route.route" tag="a">{{ route.name }}</router-link>
         </li>
       </div>
@@ -28,9 +28,9 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
-import PartnerBar from "@/components/PartnerBar.vue";
+<script lang='ts'>
+import { Vue, Component } from 'vue-property-decorator';
+import PartnerBar from '@/components/PartnerBar.vue';
 
 @Component({
   components: {
@@ -40,17 +40,17 @@ import PartnerBar from "@/components/PartnerBar.vue";
 export default class Footer extends Vue {
 routes = [
   {
-    route: "/",
-    name: "Home"
+    route: '/',
+    name: 'Home',
   },
   {
-    route: "/team",
-    name: "Team"
+    route: '/team',
+    name: 'Team',
   },
   {
-    route: "/about",
-    name: "About"
-  }
+    route: '/about',
+    name: 'About',
+  },
 ]
 }
 

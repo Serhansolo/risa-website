@@ -9,18 +9,16 @@
           <DefaultButton
             title="Button dit?"
           />
-          <DefaultButton
-
-          />
+          <DefaultButton/>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
-import DefaultButton from "@/components/DefaultButton.vue";
+<script lang='ts'>
+import { Component, Prop, Vue } from 'vue-property-decorator';
+import DefaultButton from '@/components/DefaultButton.vue';
 
 @Component({
   components: {

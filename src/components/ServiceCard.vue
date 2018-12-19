@@ -15,12 +15,12 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Vue, Component, Prop } from "vue-property-decorator";
+<script lang='ts'>
+import { Vue, Component, Prop } from 'vue-property-decorator';
 
-import BaseIcon from "@/components/BaseIcon.vue";
-import IconWorker from "@/components/icons/IconWorker.vue";
-import IconPresentation from "@/components/icons/IconPresentation.vue";
+import BaseIcon from '@/components/BaseIcon.vue';
+import IconWorker from '@/components/icons/IconWorker.vue';
+import IconPresentation from '@/components/icons/IconPresentation.vue';
 
 @Component({
   components: {

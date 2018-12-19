@@ -1,11 +1,7 @@
 <template>
   <div :class="$style.partner_bar">
     <div :class="$style.partner_wrapper">
-      <img :src="'@/assets/logos/01@3x.png'" alt="">
-      <img :src="'@/assets/logos/02@3x.png'" alt="">
-      <img :src="'@/assets/logos/03@3x.png'" alt="">
-      <img :src="'@/assets/logos/04@3x.png'" alt="">
-      <img :src="'@/assets/logos/05@3x.png'" alt="">
+      <img v-for ="partner in partners" :src="require(`@/assets/logos/${partner.src}.png`)" :alt="partner.title">
     </div>
   </div>
 </template>
@@ -15,6 +11,30 @@ import { Vue, Component, Prop } from "vue-property-decorator";
 
 @Component
 export default class PartnerBar extends Vue {
+
+partners = [
+  {
+    title: 'ingredis',
+    src: '01@3x',
+  },
+  {
+    title: 'vonde',
+    src: '02@3x',
+  },
+  {
+    title: 'be_my_queen',
+    src: '03@3x',
+  },
+  {
+    title: 'indie',
+    src: '04@3x',
+  },
+  {
+    title: 'alaska',
+    src: '05@3x',
+  },
+]
+
 }
 
 </script>
