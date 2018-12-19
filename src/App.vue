@@ -1,5 +1,5 @@
 <template>
-  <div id='app'>
+  <div id="app">
     <MainMenu/>
     <router-view/>
     <div class="filling">
@@ -8,21 +8,24 @@
       <ServiceCard icon="IconWorker"/>
       <ServiceCard icon="IconPresentation"/>
     </div>
+    <PartnerBar/>
     <Footer/>
   </div>
 </template>
 
-<script lang='ts'>
-import { Component, Vue } from 'vue-property-decorator';
-import MainMenu from '@/components/MainMenu.vue';
-import Footer from '@/components/Footer.vue';
-import ServiceCard from '@/components/ServiceCard.vue';
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
+import MainMenu from "@/components/MainMenu.vue";
+import Footer from "@/components/Footer.vue";
+import ServiceCard from "@/components/ServiceCard.vue";
+import PartnerBar from "@/components/PartnerBar.vue";
 
 @Component({
   components: {
     MainMenu,
     Footer,
     ServiceCard,
+    PartnerBar,
   },
 })
 export default class App extends Vue {}
@@ -30,21 +33,21 @@ export default class App extends Vue {}
 
 <style>
   @font-face {
-    font-family: 'Muli';
-    src: url('/assets/fonts/Multi-Regular.ttf').format('truetype'),
-         url('/assets/typo/Multi-Regular.ttf').format('truetype');
+    font-family: "Muli";
+    src: url("/assets/fonts/Multi-Regular.ttf").format("truetype"),
+         url("/assets/typo/Multi-Regular.ttf").format("truetype");
   }
 
   @font-face {
-    font-family: 'Poppins';
-      src:  url('/assets/fonts/Poppins-Regular.ttf').format('truetype'),
-            url('/assets/typo/Poppins-Regular.ttf').format('truetype');
+    font-family: "Poppins";
+      src:  url("/assets/fonts/Poppins-Regular.ttf").format("truetype"),
+            url("/assets/typo/Poppins-Regular.ttf").format("truetype");
   }
 
   body, html {
     margin: 0;
     color: rgb(254, 254, 254);
-    font-family: 'Poppins';
+    font-family: "Poppins";
   }
 
   h1, h2, html, body, p {
@@ -55,6 +58,8 @@ export default class App extends Vue {}
   .filling {
     width: 100%;
     Height : 500px;
+    max-width: 1170px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
     align-items: center;

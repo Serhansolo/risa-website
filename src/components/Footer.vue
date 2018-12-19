@@ -1,50 +1,55 @@
 <template>
-  <div :class='$style.footer'>
-    <div :class='$style.footer_content'>
-      <div :class='[$style.contact, $style.col]'>
-        <div :class='$style.logo_wrapper'>
-          <img alt='Vue logo' src='../assets/logo.png'><h2>Rounding</h2>
+  <div :class="$style.footer">
+    <div :class="$style.footer_content">
+      <div :class="[$style.contact, $style.col]">
+        <div :class="$style.logo_wrapper">
+          <img alt="Vue logo" src="@/assets/logo.png"><h2>Rounding</h2>
         </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
         <p>Email: <a href="#">info@risa-it.nl</a></p>
         <p>Call now: <a href="#">(088) - 070 08 10</a></p>
       </div>
-      <div :class='[$style.important_links, $style.col]'>
+      <div :class="[$style.important_links, $style.col]">
         <h2>Important Links</h2>
-        <li v-for='route in routes'>
-          <router-link :to='route.route' tag='a'>{{ route.name }}</router-link>
+        <li v-for="route in routes">
+          <router-link :to="route.route" tag="a">{{ route.name }}</router-link>
         </li>
       </div>
-      <div :class='[$style.latest_news, $style.col]'>
+      <div :class="[$style.latest_news, $style.col]">
         <h2>Latest News</h2>
       </div>
-      <div :class='[$style.subscribe, $style.col]'>
+      <div :class="[$style.subscribe, $style.col]">
         <h2>Subscribe Us</h2>
       </div>
     </div>
-    <div :class='$style.copywrite_block'>
-      <p> &copy; 2018 <router-link to='/' tag='a'>Rounding</router-link>. All right reserved</p>
+    <div :class="$style.copywrite_block">
+      <p> &copy; 2018 <router-link to="/" tag="a">Rounding</router-link>. All right reserved</p>
     </div>
   </div>
 </template>
 
-<script lang='ts'>
-import { Vue, Component } from 'vue-property-decorator';
+<script lang="ts">
+import { Vue, Component } from "vue-property-decorator";
+import PartnerBar from "@/components/PartnerBar.vue";
 
-@Component
+@Component({
+  components: {
+    PartnerBar,
+  },
+})
 export default class Footer extends Vue {
 routes = [
   {
-    route: '/',
-    name: 'Home'
+    route: "/",
+    name: "Home"
   },
   {
-    route: '/team',
-    name: 'Team'
+    route: "/team",
+    name: "Team"
   },
   {
-    route: '/about',
-    name: 'About'
+    route: "/about",
+    name: "About"
   }
 ]
 }
@@ -68,7 +73,7 @@ routes = [
 }
 
 .footer h2 {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-size: 14px;
   font-weight: 400;
   margin-bottom: 40px;
@@ -83,7 +88,7 @@ routes = [
 .footer a {
   color: white;
   text-decoration: none;
-  font-family: 'Muli';
+  font-family: "Muli";
   font-size: 12px;
 }
 
@@ -91,13 +96,13 @@ routes = [
   font-size: 12px;
   font-weight: 400;
   line-height: 20px;
-  font-family: 'Muli';
+  font-family: "Muli";
 }
 
 .footer {
   width: 100%;
   height: 385px;
-  background-image: url('../assets/footer_bg.png');
+  background-image: url("../assets/footer_bg.png");
   background-size: contain;
   display: flex;
   justify-content: space-between;
@@ -142,7 +147,7 @@ routes = [
 .footer_content {
   display: flex;
   flex-direction: row;
-  max-width: 800px;
+  max-width: 1170px;
   margin: 50px auto;
   width: 100%;
   align-items: flex-start;

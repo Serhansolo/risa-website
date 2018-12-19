@@ -1,36 +1,36 @@
 <template>
-<nav :class='$style.main_menu'>
-  <div :class='$style.navigation_wrapper'>
-    <div :class='$style.logo_wrapper'>
-      <img :class='$style.navigation_logo' alt='Vue logo' src='../assets/logo.png'>
-      <h2 :class='$style.navigation_title'>Rounding</h2>
+<nav :class="$style.main_menu">
+  <div :class="$style.navigation_wrapper">
+    <div :class="$style.logo_wrapper">
+      <img :class="$style.navigation_logo" alt="Vue logo" src="@/assets/logo.png">
+      <h2 :class="$style.navigation_title">Rounding</h2>
     </div>
-    <div :class='$style.navigation_link_bar'>
-      <li v-for='route in routes'>
-        <router-link :to='route.route' tag='a'>{{ route.name }}</router-link>
+    <div :class="$style.navigation_link_bar">
+      <li v-for="route in routes">
+        <router-link :to="route.route" tag="a">{{ route.name }}</router-link>
       </li>
     </div>
   </div>
 </nav>
 </template>
 
-<script lang='ts'>
-import { Component, Vue } from 'vue-property-decorator';
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
 
 @Component
 export default class MainMenu extends Vue {
   routes = [
     {
-      route: '/',
-      name: 'Home'
+      route: "/",
+      name: "Home"
     },
     {
-      route: '/team',
-      name: 'Team'
+      route: "/team",
+      name: "Team"
     },
     {
-      route: '/about',
-      name: 'About'
+      route: "/about",
+      name: "About"
     }
   ]
 }
@@ -76,7 +76,7 @@ export default class MainMenu extends Vue {
   width: 100%;
   display: flex;
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 1170px;
   justify-content: center;
   align-items: center;
 }

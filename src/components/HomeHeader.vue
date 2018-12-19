@@ -1,13 +1,13 @@
 <template>
-  <div :class='$style.home_header'>
-    <div :class='$style.overlay'>
-      <div :class='$style.text_wrapper'>
+  <div :class="$style.home_header">
+    <div :class="$style.overlay">
+      <div :class="$style.text_wrapper">
         <h1>The Solutions to</h1>
         <h1>Grow your Business</h1>
         <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
-        <div :class='$style.button_wrapper'>
+        <div :class="$style.button_wrapper">
           <DefaultButton
-            title='Button dit?'
+            title="Button dit?"
           />
           <DefaultButton
 
@@ -18,9 +18,9 @@
   </div>
 </template>
 
-<script lang='ts'>
-import { Component, Prop, Vue } from 'vue-property-decorator';
-import DefaultButton from '@/components/DefaultButton.vue';
+<script lang="ts">
+import { Component, Prop, Vue } from "vue-property-decorator";
+import DefaultButton from "@/components/DefaultButton.vue";
 
 @Component({
   components: {
@@ -35,7 +35,7 @@ export default class HomeHeader extends Vue {}
 .home_header {
   width: 100%;
   height: 720px;
-  /* background-image: url('../assets/stock-picture.jpg'); */
+  /* background-image: url("../assets/stock-picture.jpg"); */
   color: rgb(51, 75, 144);
   background-size: cover;
   overflow: hidden;
@@ -82,7 +82,7 @@ export default class HomeHeader extends Vue {}
   font-weight: 200;
   margin-bottom: 40px;
   line-height: 20px;
-  font-family: 'Muli';
+  font-family: "Muli";
 }
 
 .button_wrapper {

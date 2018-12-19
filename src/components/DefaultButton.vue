@@ -1,9 +1,9 @@
 <template>
-  <div :class='$style.button'>{{ title }}</div>
+  <div :class="$style.button">{{ title }}</div>
 </template>
 
-<script lang='ts'>
-import { Component, Prop, Vue } from 'vue-property-decorator';
+<script lang="ts">
+import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
 export default class DefaultButton extends Vue {
