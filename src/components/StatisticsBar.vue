@@ -1,5 +1,7 @@
 <template>
-  <div :class="$style.statistics_bar">
+  <div
+      :class="$style.statistics_bar"
+      v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
     <div :class="$style.wrapper">
       <div
         v-for="stats in statistics"
@@ -12,7 +14,7 @@
 </template>
 
 <script lang='ts'>
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 export default class StatisticsBar extends Vue {
@@ -35,6 +37,12 @@ export default class StatisticsBar extends Vue {
     },
   ]
 
+  intersectionOptions = {
+    root: null,
+    rootMargin: '0px 0px 0px 0px',
+    thresholds: 1.0,
+  }
+
 
   countUp(target: string) {
 
@@ -56,10 +64,12 @@ export default class StatisticsBar extends Vue {
     });
   }
 
-  mounted() {
-    this.statistics.forEach((stat) => this.countUp(stat.id))
-  }
+  onWaypoint({ going, direction }) {
 
+    if (going === this.$waypointMap.GOING_IN) {
+      this.statistics.forEach(stat => this.countUp(stat.id))
+    }
+  }
 }
 
 </script>

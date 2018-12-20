@@ -4,7 +4,7 @@
     @mouseout="isHovering=false"
   >
     <div :class="$style.svg">
-      <BaseIcon :iconColor="isHovering ? '#5580FF' : '#000000'" width="42" height="43" iconName="test">
+      <BaseIcon :iconColor="isHovering ? '#5580FF' : '#000000'" width="42" height="43">
         <component :is="icon"/>
       </BaseIcon>
     </div>

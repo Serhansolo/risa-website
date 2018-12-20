@@ -9,6 +9,11 @@
       <ServiceCard icon="IconPresentation"/>
     </div>
     <StatisticsBar/>
+    <div class="filling">
+      <TeamCard/>
+      <TeamCard/>
+      <TeamCard/>
+    </div>
     <PartnerBar/>
     <Footer/>
   </div>
@@ -22,6 +27,7 @@ import ServiceCard from '@/components/ServiceCard.vue';
 import PartnerBar from '@/components/PartnerBar.vue';
 import Header from '@/components/Header.vue';
 import StatisticsBar from '@/components/StatisticsBar.vue';
+import TeamCard from '@/components/TeamCard.vue';
 
 @Component({
   components: {
@@ -31,6 +37,7 @@ import StatisticsBar from '@/components/StatisticsBar.vue';
     PartnerBar,
     Header,
     StatisticsBar,
+    TeamCard,
   },
 })
 export default class App extends Vue {}
