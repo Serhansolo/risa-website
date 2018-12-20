@@ -8,6 +8,7 @@
       <ServiceCard icon="IconWorker"/>
       <ServiceCard icon="IconPresentation"/>
     </div>
+    <StatisticsBar/>
     <PartnerBar/>
     <Footer/>
   </div>
@@ -20,6 +21,7 @@ import Footer from '@/components/Footer.vue';
 import ServiceCard from '@/components/ServiceCard.vue';
 import PartnerBar from '@/components/PartnerBar.vue';
 import Header from '@/components/Header.vue';
+import StatisticsBar from '@/components/StatisticsBar.vue';
 
 @Component({
   components: {
@@ -28,6 +30,7 @@ import Header from '@/components/Header.vue';
     ServiceCard,
     PartnerBar,
     Header,
+    StatisticsBar,
   },
 })
 export default class App extends Vue {}
