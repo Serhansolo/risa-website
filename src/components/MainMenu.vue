@@ -6,7 +6,7 @@
       <h2 :class="$style.navigation_title">Rounding</h2>
     </div>
     <div :class="$style.navigation_link_bar">
-      <li v-for="route in routes">
+      <li v-for="route in routes" :key="route.name">
         <router-link :to="route.route" tag="a">{{ route.name }}</router-link>
       </li>
     </div>
@@ -21,17 +21,17 @@ import { Component, Vue } from 'vue-property-decorator';
 export default class MainMenu extends Vue {
   routes = [
     {
-      route: "/",
-      name: "Home"
+      route: '/',
+      name: 'Home',
     },
     {
-      route: "/team",
-      name: "Team"
+      route: '/team',
+      name: 'Team',
     },
     {
-      route: "/about",
-      name: "About"
-    }
+      route: '/about',
+      name: 'About',
+    },
   ]
 }
 
@@ -66,10 +66,11 @@ export default class MainMenu extends Vue {
 
 .main_menu {
   padding: 22px 0;
-  background-color: rgba(20, 30, 58);
+  background-color: rgba(20, 30, 58, .8);
   width: 100%;
-  z-index: 3;
+  z-index: 99;
   font-weight: 500;
+  position: fixed;
 }
 
 .navigation_wrapper {
@@ -77,6 +78,7 @@ export default class MainMenu extends Vue {
   display: flex;
   margin: 0 auto;
   max-width: 1170px;
+  padding: 0 45px;
   justify-content: center;
   align-items: center;
 }

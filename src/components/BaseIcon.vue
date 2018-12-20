@@ -22,8 +22,11 @@ import { Vue, Component, Prop } from 'vue-property-decorator';
 @Component
 export default class BaseIcon extends Vue {
   @Prop({ default: 'box' }) iconName!: string
+
   @Prop({ default: 43 }) width!: number | string
+
   @Prop({ default: 42 }) height!: number | string
+
   @Prop({ default: '#00000' }) iconColor!: string
 }
 

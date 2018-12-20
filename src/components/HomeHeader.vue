@@ -1,16 +1,15 @@
 <template>
   <div :class="$style.home_header">
-    <div :class="$style.overlay">
-      <div :class="$style.text_wrapper">
-        <h1>The Solutions to</h1>
-        <h1>Grow your Business</h1>
-        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
-        <div :class="$style.button_wrapper">
-          <DefaultButton
-            title="Button dit?"
-          />
-          <DefaultButton/>
-        </div>
+    <div :class="$style.overlay"></div>
+    <div :class="$style.text_wrapper">
+      <h1>The Solutions to</h1>
+      <h1>Grow your Business</h1>
+      <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+      <div :class="$style.button_wrapper">
+        <DefaultButton
+          title="Button dit?"
+        />
+        <DefaultButton/>
       </div>
     </div>
   </div>
@@ -33,40 +32,40 @@ export default class HomeHeader extends Vue {}
 .home_header {
   width: 100%;
   height: 720px;
-  /* background-image: url("../assets/stock-picture.jpg"); */
   color: rgb(51, 75, 144);
   background-size: cover;
-  overflow: hidden;
+  background-image: url('@/assets/stock_picture.jpg');
   color: white;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .overlay {
-  position: relative; /* Sit on top of the page content */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
+  position: absolute;
+  width: 100%;
+  height: 720px;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 150, 0.5); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  background-color: rgba(45, 69, 144, .5);
+}
+
+.text_wrapper {
+  max-width: 500px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.text_wrapper {
-  max-width: 500px;
+  z-index: 2;
 }
 
 .text_wrapper h1:nth-of-type(1) {
   font-weight: 400;
   font-size: 48px;
   color: white;
-
 }
 
 .text_wrapper h1:nth-of-type(2) {

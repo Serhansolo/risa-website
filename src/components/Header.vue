@@ -1,0 +1,109 @@
+<template>
+  <div :class="$style.header">
+    <div :class="$style.overlay"></div>
+    <div :class="$style.header_content">
+      <h1>{{ this.capitalize($route.name) }} page</h1>
+      <div :class="$style.bread_crumbs">
+        <h2
+          v-for="(route, index) in routeObjectArray"
+          :key="route.name"
+        >
+        <router-link :to="route.route" tag="a">{{ route.name }}</router-link>
+        <h2 v-if="index !== routeObjectArray.length - 1">>></h2>
+        </h2>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script lang='ts'>
+import { Vue, Component } from 'vue-property-decorator';
+
+@Component
+export default class Header extends Vue {
+  routeObjectArray = []
+
+  mounted() {
+    const newRouteObjectArray = this.createRouteObject(`home${this.$route.path}`);
+    this.routeObjectArray = newRouteObjectArray;
+  }
+
+  createRouteObject(currentRoute: string) {
+    const routeArray = currentRoute.split('/');
+
+    return routeArray.map((route) => {
+      const routePath = route === 'home' ? '/' : `/${route}`;
+
+      return { name: this.capitalize(route), route: routePath };
+    });
+  }
+
+  capitalize(targetString: string): string {
+    return targetString.charAt(0).toUpperCase() + targetString.slice(1);
+  }
+}
+
+</script>
+
+<style module>
+  .header {
+    width: 100%;
+    height: 385px;
+    background-image: url('@/assets/stock_picture.jpg');
+  }
+
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 385px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(45, 69, 144, .5);
+  }
+
+  .header_content {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header_content h1 {
+    font-family: 'Muli';
+    margin-bottom: 20px;
+    font-size: 30px;
+    z-index: 2;
+  }
+
+  .header_content h2 {
+    font-family: 'Muli';
+    font-weight: 400;
+    font-size: 14px;
+    z-index: 2;
+  }
+
+  .header_content h2 h2 {
+    display: inline;
+    margin: 0 10px;
+    font-weight: 500;
+  }
+
+  .bread_crumbs {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .bread_crumbs a {
+    color: white !important;
+    text-decoration: none;
+  }
+
+  .bread_crumbs h2:last-of-type a {
+    font-weight: 500;
+  }
+</style>

@@ -19,6 +19,7 @@ import MainMenu from '@/components/MainMenu.vue';
 import Footer from '@/components/Footer.vue';
 import ServiceCard from '@/components/ServiceCard.vue';
 import PartnerBar from '@/components/PartnerBar.vue';
+import Header from '@/components/Header.vue';
 
 @Component({
   components: {
@@ -26,6 +27,7 @@ import PartnerBar from '@/components/PartnerBar.vue';
     Footer,
     ServiceCard,
     PartnerBar,
+    Header,
   },
 })
 export default class App extends Vue {}
@@ -59,9 +61,10 @@ export default class App extends Vue {}
     width: 100%;
     Height : 500px;
     max-width: 1170px;
+    padding: 0 45px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
 </style>

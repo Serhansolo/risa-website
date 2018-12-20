@@ -1,15 +1,15 @@
 <template>
-
+  <Header/>
 </template>
 
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import ServiceCard from '@/components/ServiceCard.vue';
+import Header from '@/components/Header.vue';
 
 @Component({
   components: {
-    ServiceCard,
+    Header,
   },
 })
 export default class Team extends Vue {

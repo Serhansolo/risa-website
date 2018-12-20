@@ -5,7 +5,8 @@
         <div :class="$style.logo_wrapper">
           <img alt="Vue logo" src="@/assets/logo.png"><h2>Rounding</h2>
         </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
         <p>Email: <a href="#">info@risa-it.nl</a></p>
         <p>Call now: <a href="#">(088) - 070 08 10</a></p>
       </div>
@@ -148,6 +149,7 @@ routes = [
   display: flex;
   flex-direction: row;
   max-width: 1170px;
+  padding: 0 45px;
   margin: 50px auto;
   width: 100%;
   align-items: flex-start;
