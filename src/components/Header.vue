@@ -20,8 +20,6 @@
 import { Vue, Component } from 'vue-property-decorator';
 import { Route } from '@/types';
 
-
-
 @Component
 export default class Header extends Vue {
   routeObjectArray: Route[] = []
