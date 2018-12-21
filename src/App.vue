@@ -3,16 +3,25 @@
     <MainMenu/>
     <router-view/>
     <div class="filling">
-      <ServiceCard icon="IconWorker"/>
-      <ServiceCard icon="IconPresentation"/>
-      <ServiceCard icon="IconWorker"/>
-      <ServiceCard icon="IconPresentation"/>
+      <ServiceCard
+        v-for="service in services"
+        :icon="service.icon"
+        :subjectName="service.subjectName"
+      />
     </div>
     <StatisticsBar/>
     <div class="filling">
-      <TeamCard/>
-      <TeamCard/>
-      <TeamCard/>
+      <TeamCard
+        v-for="employe in employes"
+        :name="employe.name"
+        :functionTitle="employe.functionTitle"
+      />
+    </div>
+    <CtaBar/>
+    <div class="filling">
+      <CaseCard/>
+      <CaseCard/>
+      <CaseCard/>
     </div>
     <PartnerBar/>
     <Footer/>
@@ -28,6 +37,8 @@ import PartnerBar from '@/components/PartnerBar.vue';
 import Header from '@/components/Header.vue';
 import StatisticsBar from '@/components/StatisticsBar.vue';
 import TeamCard from '@/components/TeamCard.vue';
+import CaseCard from '@/components/CaseCard.vue';
+import CtaBar from '@/components/CtaBar.vue';
 
 @Component({
   components: {
@@ -38,9 +49,47 @@ import TeamCard from '@/components/TeamCard.vue';
     Header,
     StatisticsBar,
     TeamCard,
+    CaseCard,
+    CtaBar,
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+employes = [
+  {
+    name: 'Dayan Jonker',
+    functionTitle: 'Front-end Developer',
+  },
+  {
+    name: 'Peter van \'t Sand',
+    functionTitle: 'Back-end Developer',
+  },
+  {
+    name: 'Alvin Vogelzang',
+    functionTitle: 'Full-stack Developer',
+  },
+]
+
+services = [
+  {
+    icon: 'IconPresentation',
+    subjectName: 'Testing',
+  },
+  {
+    icon: 'IconWorker',
+    subjectName: 'Development',
+  },
+  {
+    icon: 'IconPresentation',
+    subjectName: 'Data Management',
+  },
+  {
+    icon: 'IconWorker',
+    subjectName: 'Risk Management',
+  },
+]
+
+
+}
 </script>
 
 <style>

@@ -1,14 +1,15 @@
 <template>
   <div :class="$style.team_card">
+    <img
+      :src="require(`@/assets/${this.imageSrc}`)"
+    />
     <div :class="$style.tumbnail">
-    	<h1>Dayan Jonker</h1>
-      <h2>Front-end developer</h2>
+    	<h1>{{ name }}</h1>
+      <h2>{{ functionTitle }}</h2>
       <div :class="$style.social">
-        <BaseIcon
-          @mouseover="isHovering=true"
-          @mouseout="isHovering=false"
-          :iconColor="isHovering ? '#5580FF' : '#000000'"
-        >
+
+        <!-- FIX ME: fix the linked in icon  -->
+        <BaseIcon>
           <IconLinked/>
         </BaseIcon>
       </div>
@@ -17,7 +18,7 @@
 </template>
 
 <script lang='ts'>
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from 'vue-property-decorator';
 import BaseIcon from '@/components/BaseIcon.vue';
 import IconLinked from '@/components/icons/IconLinked.vue';
 
@@ -28,8 +29,15 @@ import IconLinked from '@/components/icons/IconLinked.vue';
   },
 })
 export default class TeamCard extends Vue {
-  isHovering = false
+  @Prop({ default: 'Name Employe' }) name!: string
+
+  @Prop({ default: 'Function title' }) functionTitle!: string
+
+  @Prop({ default: 'obama.jpg' }) imageSrc!: string
+
 }
+
+
 </script>
 
 <style module>
@@ -37,12 +45,17 @@ export default class TeamCard extends Vue {
     height: 320px;
     width: 290px;
     background-color: rgb(119, 119, 119);
-    background-image: url('@/assets/obama.jpg');
     background-size: cover;
     display: flex;
     align-items: flex-end;
     cursor: pointer;
     overflow: hidden;
+  }
+
+  .team_card img {
+    width: 290px;
+    height: 320px;
+    position: absolute;
   }
 
   .tumbnail {
@@ -58,6 +71,7 @@ export default class TeamCard extends Vue {
     top: 110px;
     transition: all .2s ease;
     color: black;
+    z-index: 2;
   }
 
   .tumbnail h1 {

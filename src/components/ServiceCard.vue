@@ -9,8 +9,8 @@
       </BaseIcon>
     </div>
 
-    <h2>Market Research</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
+    <h2>{{ subjectName }}</h2>
+    <p>{{ subjectDiscription }}</p>
     <div :class="$style.service_cta">Details</div>
   </div>
 </template>
@@ -30,7 +30,11 @@ import IconPresentation from '@/components/icons/IconPresentation.vue';
   },
 })
 export default class ServiceCard extends Vue {
-  @Prop(String) icon!: string
+  @Prop({ default: 'IconPresentation' }) icon!: string
+
+  @Prop({ default: 'Subject Name' }) subjectName!: string
+
+  @Prop({ default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.' }) subjectDiscription!: string
 
   isHovering = false
 }

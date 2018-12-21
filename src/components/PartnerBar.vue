@@ -4,7 +4,7 @@
       <img
         v-for="partner in partners"
         :key="partner.title"
-        :src="require(`@/assets/logos/${partner.src}.png`)"
+        :src="require(`@/assets/logos/${partner.src}`)"
         :alt="partner.title"
       />
     </div>
@@ -19,23 +19,23 @@ export default class PartnerBar extends Vue {
   partners = [
     {
       title: 'ingredis',
-      src: '01@3x',
+      src: '01@3x.png',
     },
     {
       title: 'vonde',
-      src: '02@3x',
+      src: '02@3x.png',
     },
     {
       title: 'be_my_queen',
-      src: '03@3x',
+      src: '03@3x.png',
     },
     {
       title: 'indie',
-      src: '04@3x',
+      src: '04@3x.png',
     },
     {
       title: 'alaska',
-      src: '05@3x',
+      src: '05@3x.png',
     },
   ]
 }
