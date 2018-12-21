@@ -5,6 +5,7 @@
     <div :class="$style.wrapper">
       <div
         v-for="stats in statistics"
+        :key="stats.id"
         :class="$style.test">
         <h1 :id="stats.id" :data-count="stats.value">0</h1>
         <h2>{{ stats.task }}</h2>
@@ -15,10 +16,10 @@
 
 <script lang='ts'>
 import { Component, Vue } from 'vue-property-decorator';
+import $ from 'jquery';
 
 @Component
 export default class StatisticsBar extends Vue {
-
   statistics = [
     {
       id: 'task_01',
@@ -46,28 +47,27 @@ export default class StatisticsBar extends Vue {
 
   countUp(target: string) {
 
-    var $this = $(`h1#${target}`);
-    var countTo = $this.attr('data-count');
+    const $this = $(`h1#${target}`);
+    const countTo = $this.attr('data-count');
 
-    $({countNum: $this.text()}).animate({
-      countNum: countTo
+    $({ countNum: $this.text() }).animate({
+      countNum: countTo,
     },
     {
       duration: 2000,
       easing: 'linear',
-      step: function() {
-        $this.text(Math.floor(this.countNum));
+      step: function () {
+        $this.text(Math.floor(parseInt(this.countNum)));
       },
-      complete: function() {
+      complete: function () {
         $this.text(this.countNum);
-      }
+      },
     });
   }
 
-  onWaypoint({ going, direction }) {
-
-    if (going === this.$waypointMap.GOING_IN) {
-      this.statistics.forEach(stat => this.countUp(stat.id))
+  onWaypoint({ going, direction }: any) {
+    if (going === 'in') {
+      this.statistics.forEach(stat => this.countUp(stat.id));
     }
   }
 }
