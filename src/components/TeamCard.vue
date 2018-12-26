@@ -42,8 +42,8 @@ export default class TeamCard extends Vue {
 
 <style module>
   .team_card {
-    height: 320px;
-    width: 290px;
+    height: 400px;
+    width: 360px;
     background-color: rgb(119, 119, 119);
     background-size: cover;
     display: flex;
@@ -53,14 +53,14 @@ export default class TeamCard extends Vue {
   }
 
   .team_card img {
-    width: 290px;
-    height: 320px;
+    height: 400px;
+    width: 360px;
     position: absolute;
   }
 
   .tumbnail {
     width: 100%;
-    height: 100px;
+    min-height: 160px;
     margin: 0 10px 10px;
     background: rgb(255, 255, 255, .5);
     display: flex;
@@ -68,7 +68,7 @@ export default class TeamCard extends Vue {
     align-items: center;
     flex-direction: column;
     position: relative;
-    top: 110px;
+    top: 200px;
     transition: all .2s ease;
     color: black;
     z-index: 2;
@@ -76,12 +76,14 @@ export default class TeamCard extends Vue {
 
   .tumbnail h1 {
     font-size: 22px;
+    margin: 22px 0 10px;
   }
 
   .tumbnail h2 {
-    font-size: 14px;
+    font-size: 18px;
     font-family: 'Muli';
     font-weight: 400;
+    margin-bottom: 10px;
   }
 
   .team_card:hover .tumbnail {

@@ -44,12 +44,13 @@ export default class ServiceCard extends Vue {
 <style module>
 
   .service_card {
-    width: 210px;
+    width: 260px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 0.1px solid transparent;
+    color: black;
   }
 
   .service_card:hover {
@@ -68,24 +69,23 @@ export default class ServiceCard extends Vue {
 
   .service_card h2 {
     font-family: "Poppins";
-    font-size: 14px;
+    font-size: 18px;
     margin-bottom: 10px;
   }
 
   .service_card p {
     font-family: "Muli";
-    font-size: 12px;
-    line-height: 20px;
-    color: black;
+    font-size: 14px;
+    line-height: 25px;
     max-width: 190px;
     margin-bottom: 20px;
     text-align: center;
   }
 
  .svg {
-    width: 40px;
-    height: 40px;
-    margin: 15px 0;
+    width: 50px;
+    height: 50px;
+    margin: 30px 0 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,7 +93,7 @@ export default class ServiceCard extends Vue {
 
   .service_cta {
     width: 100%;
-    padding: 12px 0;
+    padding: 18px 0;
     color: black;
     display: flex;
     justify-content: center;
@@ -102,11 +102,6 @@ export default class ServiceCard extends Vue {
     text-transform: uppercase;
     font-family: "Muli";
     font-size: 12px;
-  }
-
-  .service_card h2 {
-    color: black;
-    max-width: 180px;
   }
 
 </style>

@@ -19,7 +19,7 @@ export default class DefaultButton extends Vue {
   .button {
     min-width: 125px;
     border-radius: 30px;
-    padding: 10px 10px;
+    padding: 15px 35px;
     border: 1px solid white;
     margin: 0 5px;
     text-transform: uppercase;

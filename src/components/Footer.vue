@@ -75,14 +75,14 @@ routes = [
 
 .footer h2 {
   font-family: "Poppins";
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   margin-bottom: 40px;
 }
 
 .logo_wrapper h2 {
   margin-left: 10px;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 500;
 }
 
@@ -90,11 +90,11 @@ routes = [
   color: white;
   text-decoration: none;
   font-family: "Muli";
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .footer p {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   font-family: "Muli";
@@ -102,7 +102,7 @@ routes = [
 
 .footer {
   width: 100%;
-  height: 385px;
+  height: 480px;
   background-image: url("../assets/footer_bg.png");
   background-size: contain;
   display: flex;
@@ -127,7 +127,7 @@ routes = [
 }
 
 .copywrite_block {
-  height: 40px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,21 +135,22 @@ routes = [
 }
 
 .copywrite_block p {
-  font-size: 12px;
   font-weight: 400;
+  font-size: 16px;
 }
 
 .copywrite_block a {
   color: rgb(85, 128, 255);
   text-decoration: none;
   font-weight: 400;
+  font-size: 16px;
 }
 
 .footer_content {
   display: flex;
   flex-direction: row;
   max-width: 1170px;
-  padding: 0 45px;
+  padding: 50px 45px 0;
   margin: 50px auto;
   width: 100%;
   align-items: flex-start;

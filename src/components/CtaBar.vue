@@ -29,7 +29,7 @@ import DefaultButton from '@/components/DefaultButton.vue';
 export default class CtaBar extends Vue {
   @Prop({ default: 'Contact us' }) buttonText!: string
 
-  @Prop({ default: 'Get expert advice and start developing' }) barTitle!: string
+  @Prop({ default: 'Get expert developers and start' }) barTitle!: string
 
   @Prop({ default: 'Get the developers that match your projects' }) barDescription!: string
 }
@@ -38,7 +38,7 @@ export default class CtaBar extends Vue {
 <style module>
 .cta_bar {
   width: 100%;
-  height: 175px;
+  height: 220px;
   background-color: rgb(30, 30, 30);
   display: flex;
   justify-content: center;
@@ -61,13 +61,13 @@ export default class CtaBar extends Vue {
 
 .text_wrapper h1 {
   width: 100%;
-  font-size: 26px;
+  font-size: 34px;
   margin-bottom: 10px;
 }
 
 .text_wrapper h2 {
   font-family: 'Muli';
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
 }
 

@@ -45,7 +45,7 @@ export default class PartnerBar extends Vue {
 <style module>
   .partner_bar {
     width: 100%;
-    height: 180px;
+    height: 220px;
     background-color: #F4F7FC;
     display: flex;
     justify-content: center;
@@ -63,7 +63,7 @@ export default class PartnerBar extends Vue {
   }
 
   .partner_wrapper img {
-    width: 120px;
+    width: 140px;
   }
 
 </style>

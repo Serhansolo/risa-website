@@ -19,9 +19,11 @@
     </div>
     <CtaBar/>
     <div class="filling">
-      <CaseCard/>
-      <CaseCard/>
-      <CaseCard/>
+      <CaseCard
+        v-for="studie in studies"
+        :title="studie.title"
+        :key="studie.id"
+      />
     </div>
     <PartnerBar/>
     <Footer/>
@@ -72,19 +74,34 @@ employes = [
 services = [
   {
     icon: 'IconPresentation',
-    subjectName: 'Testing',
-  },
-  {
-    icon: 'IconWorker',
-    subjectName: 'Development',
-  },
-  {
-    icon: 'IconPresentation',
-    subjectName: 'Data Management',
+    subjectName: 'Financial Consulting',
   },
   {
     icon: 'IconWorker',
     subjectName: 'Risk Management',
+  },
+  {
+    icon: 'IconWorker',
+    subjectName: 'Risk Management',
+  },
+  {
+    icon: 'IconWorker',
+    subjectName: 'Risk Management',
+  },
+]
+
+studies = [
+  {
+    id: 'case_1',
+    title: 'Financial planing case',
+  },
+  {
+    id: 'case_2',
+    title: 'Application design',
+  },
+  {
+    id: 'case_3',
+    title: 'New testing framework',
   },
 ]
 
@@ -119,8 +136,8 @@ services = [
   .filling {
     width: 100%;
     Height : 500px;
-    max-width: 1170px;
-    padding: 0 45px;
+    max-width: 1140px;
+    padding: 0 15px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;

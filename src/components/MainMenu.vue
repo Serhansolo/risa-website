@@ -51,7 +51,7 @@ export default class MainMenu extends Vue {
   display: inline-block;
   cursor: pointer;
   margin-left: 30px;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .navigation_link_bar a {
@@ -61,11 +61,11 @@ export default class MainMenu extends Vue {
 
 .navigation_title  {
   margin-left: 10px;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .main_menu {
-  padding: 22px 0;
+  padding: 28px 0;
   background-color: rgba(20, 30, 58, .8);
   width: 100%;
   z-index: 99;
@@ -77,8 +77,8 @@ export default class MainMenu extends Vue {
   width: 100%;
   display: flex;
   margin: 0 auto;
-  max-width: 1170px;
-  padding: 0 45px;
+  max-width: 1140px;
+  padding: 0 15px;
   justify-content: center;
   align-items: center;
 }

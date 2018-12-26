@@ -6,7 +6,7 @@
       <div
         v-for="stats in statistics"
         :key="stats.id"
-        :class="$style.test">
+        :class="$style.stat_container">
         <h1 :id="stats.id" :data-count="stats.value">0</h1>
         <h2>{{ stats.task }}</h2>
       </div>
@@ -36,6 +36,11 @@ export default class StatisticsBar extends Vue {
       task: 'Data Uploaded',
       value: '1364',
     },
+    {
+      id: 'task_04',
+      task: 'Party\'s given!',
+      value: '4',
+    },
   ]
 
   intersectionOptions = {
@@ -43,7 +48,6 @@ export default class StatisticsBar extends Vue {
     rootMargin: '0px 0px 0px 0px',
     thresholds: 1.0,
   }
-
 
   countUp(target: string) {
 
@@ -77,11 +81,12 @@ export default class StatisticsBar extends Vue {
 <style module>
   .statistics_bar {
     width: 100%;
-    height: 320px;
+    height: 400px;
     background-color: rgba(17, 29, 45);
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Muli';
   }
 
   .wrapper {
@@ -95,22 +100,25 @@ export default class StatisticsBar extends Vue {
     align-items: center;
   }
 
-  .test {
+  .stat_container {
     display: flex;
     height: 100%;
-    min-width: 250px;
+    min-width: 290px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .test + .test {
+  .stat_container + .stat_container {
     border-left: 0.2px solid rgba(224, 247, 252, .9);
   }
 
-  .test h2 {
+  .stat_container h1 {
+    font-size: 40px;
+  }
+
+  .stat_container h2 {
     margin-top: 10px;
-    font-family: 'Muli';
-    font-size: 14px;
+    font-size: 16px;
   }
 </style>
