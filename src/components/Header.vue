@@ -25,23 +25,31 @@ export default class Header extends Vue {
   routeObjectArray: Route[] = []
 
   mounted() {
-    const newRouteObjectArray = this.createRouteObject(`home${this.$route.path}`);
+    const newRouteObjectArray: Route[] = this.createRouteObject(`home${this.$route.path}`);
     this.routeObjectArray = newRouteObjectArray;
   }
 
-  createRouteObject(currentRoute: string) {
-    const routeArray = currentRoute.split('/');
+  createRouteObject(fullRoute: string) {
+    const routeArray: string[] = fullRoute.split('/');
+    const routeObject: Route[] = [];
 
-    return routeArray.map((route) => {
-      const routePath = route === 'home' ? '/' : `/${route}`;
+    routeArray.reduce((fullPath: string, currentRoute: string) => {
+      const routePath: string = currentRoute === 'home' ? '' : currentRoute;
 
-      return { name: this.capitalize(route), route: routePath };
-    });
+      routeObject.push({
+        name: this.capitalize(this.removeHyphen(currentRoute)),
+        route: fullPath += routePath,
+      });
+
+      return fullPath === '/' ? fullPath : `${fullPath}/`;
+    }, '/');
+
+    return routeObject;
   }
 
-  capitalize(targetString: string): string {
-    return targetString.charAt(0).toUpperCase() + targetString.slice(1);
-  }
+  capitalize = (x: string): string => x.charAt(0).toUpperCase() + x.slice(1);
+
+  removeHyphen = (x: string): string => x.replace(/-/g, ' ');
 }
 
 </script>

@@ -78,6 +78,4 @@ export default class CtaBar extends Vue {
   align-items: center;
 }
 
-
-
 </style>

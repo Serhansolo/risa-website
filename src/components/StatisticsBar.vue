@@ -49,8 +49,7 @@ export default class StatisticsBar extends Vue {
     thresholds: 1.0,
   }
 
-  countUp(target: string) {
-
+  countUp = (target: string) => {
     const $this = $(`h1#${target}`);
     const countTo = $this.attr('data-count');
 
@@ -60,10 +59,10 @@ export default class StatisticsBar extends Vue {
     {
       duration: 2000,
       easing: 'linear',
-      step: function () {
-        $this.text(Math.floor(parseInt(this.countNum)));
+      step() {
+        $this.text(Math.floor(parseInt(this.countNum, 10)));
       },
-      complete: function () {
+      complete() {
         $this.text(this.countNum);
       },
     });

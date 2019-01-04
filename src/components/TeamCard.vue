@@ -4,14 +4,10 @@
       :src="require(`@/assets/${this.imageSrc}`)"
     />
     <div :class="$style.tumbnail">
-    	<h1>{{ name }}</h1>
+      <h1>{{ name }}</h1>
       <h2>{{ functionTitle }}</h2>
       <div :class="$style.social">
 
-        <!-- FIX ME: fix the linked in icon  -->
-        <BaseIcon>
-          <IconLinked/>
-        </BaseIcon>
       </div>
     </div>
   </div>
@@ -19,22 +15,15 @@
 
 <script lang='ts'>
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import BaseIcon from '@/components/BaseIcon.vue';
 import IconLinked from '@/components/icons/IconLinked.vue';
 
-@Component({
-  components: {
-    BaseIcon,
-    IconLinked,
-  },
-})
+@Component
 export default class TeamCard extends Vue {
   @Prop({ default: 'Name Employe' }) name!: string
 
   @Prop({ default: 'Function title' }) functionTitle!: string
 
   @Prop({ default: 'obama.jpg' }) imageSrc!: string
-
 }
 
 

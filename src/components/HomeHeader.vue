@@ -2,15 +2,14 @@
   <div :class="$style.home_header">
     <div :class="$style.overlay"></div>
     <div :class="$style.text_wrapper">
-      <h1>The Solutions to</h1>
-      <h1>Grow your Business</h1>
-      <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+      <h1>{{ title.top }}</h1>
+      <h1>{{ title.bottom }}</h1>
+      <h2>{{ description }}</h2>
       <div :class="$style.button_wrapper">
         <DefaultButton
-          title="Button dit?"
+          title="Ontdek meer"
           isFilled=true
         />
-        <DefaultButton/>
       </div>
     </div>
   </div>
@@ -19,13 +18,18 @@
 <script lang='ts'>
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import DefaultButton from '@/components/DefaultButton.vue';
+import { HomeTitle } from '@/types';
 
 @Component({
   components: {
     DefaultButton,
   },
 })
-export default class HomeHeader extends Vue {}
+export default class HomeHeader extends Vue {
+  @Prop({ default: () => ({ top: 'The Solutions to', bottom: 'Grow your Business' }) }) title!: HomeTitle
+
+  @Prop({ default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' }) description!: string
+}
 
 </script>
 

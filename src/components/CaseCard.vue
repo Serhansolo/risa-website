@@ -6,6 +6,7 @@
     >
     <h2>{{ title }}</h2>
     <p>{{ description }}</p>
+    <a>Lees meer over deze diensteverlening &rarr;</a>
   </div>
 </template>
 
@@ -25,9 +26,22 @@ export default class CaseCard extends Vue {
 <style module>
   .case_card {
     width: 330px;
-    height: 380px;
     color: black;
     cursor: pointer;
+  }
+
+  .case_card a {
+    margin-top: 10px;
+    color: rgb(85, 128, 255);
+  }
+
+  .case_card:hover a {
+    text-decoration: underline;
+  }
+
+  .case_card a,
+  .case_card p {
+    font-size: 14px;
   }
 
   .image_window {
@@ -47,6 +61,7 @@ export default class CaseCard extends Vue {
 
   .case_card p {
     margin-top: 10px;
+    margin-bottom: 10px;
     line-height: 25px;
   }
 

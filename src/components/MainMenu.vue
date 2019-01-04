@@ -25,12 +25,24 @@ export default class MainMenu extends Vue {
       name: 'Home',
     },
     {
+      route: '/about',
+      name: 'Over Risa',
+    },
+    {
+      route: '/services',
+      name: 'Diensten',
+    },
+    {
+      route: '/projects',
+      name: 'Projecten',
+    },
+    {
       route: '/team',
       name: 'Team',
     },
     {
-      route: '/about',
-      name: 'About',
+      route: '/contact',
+      name: 'Contact',
     },
   ]
 }
