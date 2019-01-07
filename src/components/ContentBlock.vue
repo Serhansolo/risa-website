@@ -1,7 +1,7 @@
 <template>
   <div :class="{ [$style.content_block]:true, [$style.reverse_order]:reverseOrder }">
     <div :class="$style.text_wrapper">
-      <!-- <h2>Wie zijn wij</h2>
+      <h2>Wie zijn wij</h2>
       <h2>Missie</h2>
       <p>
         Bij RISA IT staat de opdrachtgever centraal.
@@ -19,9 +19,7 @@
         Als ‘ typisch RISA IT’ noemen opdrachtgevers onze heldere manier van dienstverlening met optimale service.
         Wij voeren onze werkzaamheden dan ook altijd uit met passie voor het vak. Onze professionals deden ervaring op bij de top vijf IT-leveranciers en bepalen nu binnen RISA IT hun eigen carrière. RISA IT is zo ingericht dat wij flexibel omgaan met wensen van opdrachtgevers en snel schakelen.
         Omdat we begrijpen dat onze opdrachtgevers snel in moeten spelen op veranderingen in de markt.
-      </p> -->
-
-      <slot></slot>
+      </p>
       <a>Klik hier als je meer wil weten over ons &rarr;</a>
     </div>
     <img src="">

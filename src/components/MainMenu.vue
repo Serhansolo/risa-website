@@ -68,7 +68,7 @@ export default class MainMenu extends Vue {
 
 .navigation_link_bar a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .navigation_title  {
@@ -77,12 +77,13 @@ export default class MainMenu extends Vue {
 }
 
 .main_menu {
-  padding: 28px 0;
-  background-color: rgba(20, 30, 58, .8);
+  padding: 52px 0;
+  background-color: white;
   width: 100%;
   z-index: 99;
   font-weight: 500;
-  position: fixed;
+  color: black;
+  /* position: fixed; */
 }
 
 .navigation_wrapper {

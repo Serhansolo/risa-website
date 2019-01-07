@@ -8,8 +8,9 @@
           v-for="(route, index) in routeObjectArray"
           :key="route.name"
         >
-        <router-link :to="route.route" tag="a">{{ route.name }}</router-link>
-        <h2 v-if="index !== routeObjectArray.length - 1">>></h2>
+          <router-link :to="route.route" tag="a">{{ route.name }}</router-link>
+          <h2 v-if="index !== routeObjectArray.length - 1">
+            <v-icon scale="1.5" name="hand-point-right"/></h2>
         </h2>
       </div>
     </div>
@@ -65,7 +66,7 @@ export default class Header extends Vue {
     position: absolute;
     width: 100%;
     height: 385px;
-    top: 0;
+    top: 129px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -114,5 +115,11 @@ export default class Header extends Vue {
 
   .bread_crumbs h2:last-of-type a {
     font-weight: 500;
+  }
+
+  .bread_crumbs h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>

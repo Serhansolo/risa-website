@@ -1,7 +1,7 @@
 {
   module: {
     rules: [
-      // ... other rules omitted
+      { test: /\.html$/, use: 'vue-template-loader' },
       {
         test: /\.css$/,
         oneOf: [

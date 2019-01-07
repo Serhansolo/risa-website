@@ -34,18 +34,6 @@
       </div>
     </div>
     <ContentBlock/>
-
-    <ContentBlock>
-      <h2>Wie zijn wij</h2>
-      <h2>Missie</h2>
-      <p>
-        Bij RISA IT staat de opdrachtgever centraal.
-        Onze enthousiaste professionals vertalen uw wensen naar IT-oplossingen.
-        Onze missie sluit daarbij aan: RISA IT ontzorgt haar opdrachtgevers op het gebied van IT, zodat zij zich bezig kunnen houden met de core business.
-        U kunt daarbij rekenen op een ‘royal treatment’.
-        Met hoogwaardige en betrouwbare IT-diensten maken wij uw IT tot onze zorg.
-        Wij worden geïnspireerd door de resultaten die wij voor u behalen.
-      </p>
     <ContentBlock
       reverseOrder="true"
     />
